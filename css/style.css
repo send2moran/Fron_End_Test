@@ -1,0 +1,443 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+body.test_app{
+    background: url('../img/BGtile.jpg');
+}
+
+.overflow_element{
+    overflow: hidden;
+    padding-bottom: 100px;
+    height:100%;
+}
+.test_app .container{
+    width:1000px;
+    background-color: #ffffff;
+    margin:auto;
+    position: absolute;
+    top:20%;
+    left:0px;
+    right:0px;
+    height:500px;
+
+}
+
+.test_app .container H1{
+    background-color: #6EC5D0;
+    font-size:16px;
+    text-align: center;
+    height: 40px;
+    font-family: arial;
+    padding:10px 0px;
+    color: white;
+    margin:0px;
+}
+
+
+.scroll_container{
+    -webkit-transform:translateZ(0);
+    -webkit-transition:all 1s cubic-bezier(.42,0,.58,1);
+    -moz-transition:all 1s cubic-bezier(.42,0,.58,1);
+    -ms-transition:all 1s cubic-bezier(.42,0,.58,1);
+    -o-transition:all 1s cubic-bezier(.42,0,.58,1);
+    transition:all 1s cubic-bezier(.42,0,.58,1);
+    -webkit-transition-timing-function:cubic-bezier(.42,0,.58,1);
+    -moz-transition-timing-function:cubic-bezier(.42,0,.58,1);
+    -ms-transition-timing-function:cubic-bezier(.42,0,.58,1);
+    -o-transition-timing-function:cubic-bezier(.42,0,.58,1);
+    transition-timing-function:cubic-bezier(.42,0,.58,1);
+    width:100%;
+    position: relative;
+}
+
+.scroll_container:after{
+    display: block;
+    content:'';
+    clear: both;
+}
+
+
+.item_g {
+    margin-top: 100px;
+    padding: 0;
+    position: absolute;
+    width: 1000px;
+    left:0px;
+}
+
+
+.item_g.left.ng-hide{
+    left:-100%;
+}
+.item_g.left.ng-hide-add{
+}
+.item_g.left.ng-hide-add-active {
+    -webkit-animation:0.4s hide_left;
+    animation:0.4s hide_left;
+}
+
+@-webkit-keyframes hide_left {
+    from { left:0px; }
+    to { left:100%; }
+}
+
+@keyframes hide_left {
+    from { left:0px; }
+    to { left:100%; }
+}
+
+.item_g.left.ng-hide-remove{
+    left:0px;
+}
+.item_g.left.ng-hide-remove-active {
+    -webkit-animation:0.5s show_left;
+    animation:0.5s show_left;
+    display: block !important;
+}
+
+@-webkit-keyframes show_left {
+    from { left:-100%; }
+    to { left:0px; }
+}
+@keyframes show_left {
+    from { left:-100%; }
+    to { left:0px; }
+}
+
+
+
+.item_g.right.ng-hide{
+    left:100%;
+}
+.item_g.right.ng-hide-add{
+}
+.item_g.right.ng-hide-add-active {
+    -webkit-animation:0.4s hide_right;
+    animation:0.4s hide_right;
+}
+@-webkit-keyframes hide_right {
+    from { left:0px}
+    to { left:-100%; }
+}
+
+@keyframes hide_right {
+    from { left:0px}
+    to { left:-100%; }
+}
+
+.item_g.right.ng-hide-remove{
+    left:0px;
+}
+.item_g.right.ng-hide-remove-active {
+    -webkit-animation:0.5s show_right;
+    animation:0.5s show_right;
+    display: block !important;
+}
+
+@-webkit-keyframes show_right {
+    from { left:100%; }
+    to { left:0px; }
+}
+@keyframes show_right {
+    from { left:100%; }
+    to { left:0px; }
+}
+
+
+
+
+
+.item_g.ng-hide{
+    left:100%;
+}
+.item_g.ng-hide-add{
+}
+.item_g.ng-hide-add-active {
+    -webkit-animation:0.4s hide_right;
+    animation:0.4s hide_right;
+}
+@-webkit-keyframes hide_right {
+    from { left:0px}
+    to { left:-100%; }
+}
+
+@keyframes hide_right {
+    from { left:0px}
+    to { left:-100%; }
+}
+
+.item_g.ng-hide-remove{
+    left:0px;
+}
+.item_g.ng-hide-remove-active {
+    -webkit-animation:0.5s show_right;
+    animation:0.5s show_right;
+    display: block !important;
+}
+
+@-webkit-keyframes show_right {
+    from { left:100%; }
+    to { left:0px; }
+}
+@keyframes show_right {
+    from { left:100%; }
+    to { left:0px; }
+}
+
+
+.item_g .animal{
+
+    background-color: black;
+    width:166px;
+    height:152px;
+    float: left;
+    margin-left: 75px;
+    list-style: none;
+    background: url('../img/animalSprite.png');
+    position: relative;
+    cursor: pointer;
+}
+
+.item_g .bison{
+    width:166px;
+}
+
+.item_g .dodo{
+    width: 131px;
+    background-position: -166px 0 ;
+}
+
+
+
+.item_g .rtr{
+    background-position: -297px 0;
+    width: 171px;
+}
+
+.item_g .wbs{
+    background-position: -468px 0;
+    width: 142px;
+}
+
+.item_g .sg{
+    background-position: -610px 0;
+    width: 150px;
+}
+
+.item_g .fb{
+    background-position: -760px 0;
+    width: 142px;
+}
+
+.item_g .eo{
+    background-position: -903px 0;
+    width: 149px;
+}
+.item_g .ut{
+    background-position: -1052px 0;
+    width: 161px;
+}
+
+
+.item_g .bison.animal_selected,
+.item_g .bison:hover{
+    background-position: 0px -153px ;
+}
+
+.item_g .dodo.animal_selected,
+.item_g .dodo:hover{
+    background-position: -166px -153px ;
+}
+
+.item_g .rtr.animal_selected,
+.item_g .rtr:hover{
+    background-position: -297px -153px;
+}
+
+.item_g .wbs.animal_selected,
+.item_g .wbs:hover{
+    background-position: -468px -153px;
+}
+
+.item_g .sg.animal_selected,
+.item_g .sg:hover{
+    background-position: -610px -153px;
+}
+
+.item_g .fb.animal_selected,
+.item_g .fb:hover{
+    background-position: -760px -153px;
+}
+
+.item_g .eo.animal_selected,
+.item_g .eo:hover{
+    background-position: -903px -153px;
+}
+.item_g .ut.animal_selected,
+.item_g .ut:hover{
+    background-position: -1052px -153px;
+}
+
+.item_g .animal_selected,
+.item_g .bison:hover span,
+.item_g .bison.animal_selected,
+.item_g .dodo:hover span,
+.item_g .dodo.animal_selected,
+.item_g .rtr:hover span,
+.item_g .rtr.animal_selected,
+.item_g .wbs:hover span,
+.item_g .wbs.animal_selected,
+.item_g .sg:hover span,
+.item_g .sg.animal_selected,
+.item_g .fb:hover span,
+.item_g .fb.animal_selected,
+.item_g .eo.animal_selected,
+.item_g .eo:hover span,
+.item_g .ut.animal_selected,
+.item_g .ut:hover span{
+    color: #e66857;
+}
+
+
+
+.item_g .animal SPAN{
+    bottom: -60px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.controls label {
+    background-color: #f8cf3a;
+    border-radius: 25px;
+    bottom: 0;
+    display: none;
+    height: 50px;
+    position: absolute;
+    top: 263px !important;
+    width: 50px;
+    cursor: pointer;
+}
+
+
+.controls label.icon-2{
+    margin-right: 0.0714286em;
+}
+.controls label.icon-2 {
+    color: white;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+}
+
+
+.controls label:hover {
+    background-color: #e9b827;
+}
+#ig1,#ig2,#ig3{
+    display: none;
+}
+
+
+.controls .ig1{
+    background-position: 521px -459px;
+    display: block;
+    margin: 0;
+    position: absolute;
+    right: -25px;
+    left:auto;
+    top: 0;
+}
+
+.controls .ig4{
+    background-position: 591px -459px;
+    display:block;
+    position:absolute;
+    left:-25px;
+    top:0;
+    right:auto;
+    margin:0;
+}
+
+
+
+.submit_button{
+    background-color: #56BA98;
+    border: medium none;
+    border-radius: 3px 3px 3px 3px;
+    bottom: 30px;
+    box-shadow: 0 -1px 0 #BBE7D7 inset, 0 2px 0 #ADD9C9;
+    color: #FFFFFF;
+    font-family: arial;
+    height: 20px;
+    width:100px;
+    left: 0;
+    margin: auto;
+    padding: 10px 40px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.submit_button.submit_disabled{
+    background-color: #ADD9C9;
+}
+.submit_button:not(.submit_disabled):hover{
+    background-color: #49A682;
+}
+
+
+.mask_el{
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    background-color:#000000;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.overlay_text{
+    bottom: 0;
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 24px;
+    height: 20px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 394px;
+    z-index: 2;
+    text-align: center;
+}
+
+
+
+.animate-enter,
+.animate-leave
+{
+    -webkit-transition: 300ms cubic-bezier(0.600, 0.040, 0.980, 0.335) all;
+    -moz-transition: 300ms cubic-bezier(0.600, 0.040, 0.980, 0.335) all;
+    -ms-transition: 300ms cubic-bezier(0.600, 0.040, 0.980, 0.335) all;
+    -o-transition: 300ms cubic-bezier(0.600, 0.040, 0.980, 0.335) all;
+    transition: 300ms cubic-bezier(0.600, 0.040, 0.980, 0.335) all;
+}
+
+.animate-enter {
+    top: 100%;
+}
+.animate-enter.animate-enter-active {
+    top: 0;
+}
+
+.animate-leave {
+    top: 0;
+}
+.animate-leave.animate-leave-active{
+    top: -100%;
+}

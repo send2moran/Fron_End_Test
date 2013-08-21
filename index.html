@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!--<base href="file:///Users/Moran/WebstormProjects/test/">-->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js" type="text/javascript"></script>
+    <script src="http://code.angularjs.org/1.2.0rc1/angular-animate.min.js" type="text/javascript"></script>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+</head>
+<body class="test_app" ng-app="myApp" ng-cloak>
+
+<div class="container" ng-controller="AnimalsCtrl">
+
+    <span class="overlay_text" ng-show="isSubmitted">
+            That's and  awesome choice dude !!!  <br/>
+            Better luck with your new zoo !!
+    </span>
+    <div class="mask_el" ng-show="isSubmitted">
+    </div>
+
+    <div class="overflow_element">
+        <div class="q_container">
+            <h1>Your private zoo is on fire, and you have time to save only 3 animals.<br/> Which will they be?</h1>
+
+            <div class="scroll_container">
+                    <ul  ng-class="visibleDirection" ng-show="$index == visibleIndex"  class="item_g item_g_{{$index+1}}"
+                         ng-repeat="animal_page in animalPages">
+                        <li ng-repeat="animal in animals | startFrom:$index*pageSize | limitTo: pageSize"
+                            ng-click="select(animal[0]);logUserAction('clicked on:'+animal[1])"
+                            ng-class="{'animal_selected' : isAnimalInSelection(animal[0])}"
+                            class="animal animal {{animal[0]}}"><span>{{animal[1]}}</span>
+                        </li>
+                    </ul>
+            </div>
+
+            <div class="controls">
+                <label class="ig1 icon-chevron-right icon-2" ng-mouseover="visibleDirection = 'right'" ng-click="logUserAction('arrow click right');setVisibleIndex('right')"></label>
+                <label class="ig4 icon-chevron-left icon-2" ng-mouseover="visibleDirection = 'left'" ng-click="logUserAction('arrow click left');setVisibleIndex('left')" ></label>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="" class="submit_button" ng-click="submitSelection();logUserAction('User Submit Data')" ng-class="{submit_disabled : animalsSelected.length < 3}">submit {{animalsSelected.length}} / 3</a>
+
+</div>
+
+
+<script type="text/javascript" src="js/testCtrl.js"></script>
+
+</body>
+</html>
